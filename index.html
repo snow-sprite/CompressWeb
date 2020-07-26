@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Compress your images</title>
+  <link rel="stylesheet" href="./static//css/swiper-bundle.min.css">
+  <link rel="stylesheet" href="./static/css/style.css">
+</head>
+<body>
+  <header>
+    <img src="./static/imgs/icon.png" alt="" srcset="">
+    <span>Compress your images</span>
+  </header>
+  <main>
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <img src="./static/demo/Local.min.png" alt="Local" srcset="">
+        </div>
+        <div class="swiper-slide">
+          <img src="./static/demo/Compressed.min.png" alt="Compressing" srcset="">
+        </div>
+        <div class="swiper-slide">
+          <img src="./static/demo/Online.min.png" alt="Online" srcset="">
+        </div>
+        <div class="swiper-slide">
+          <img src="./static//demo/Settings.min.png" alt="Settings" srcset="">
+        </div>
+      </div>
+    </div>
+    <div class="down-box">
+      <a href="http://download.zhiozhou.top/Compress%20your%20images_setup_0.2.0.dmg">下载macOS端</a>
+      <a href="http://download.zhiozhou.top/Compress%20your%20images_setup_0.2.0.exe">下载Windows端</a>
+    </div>
+  </main>
+  <footer>
+    &copy; 2020 zhiozhou@Cid 京ICP备 18048270号
+  </footer>
+</body>
+<script src="./static/js/swiper-bundle.min.js"></script>
+<script>
+  var mySwiper = new Swiper('.swiper-container', {
+    direction: 'horizontal', // 垂直切换选项
+    autoplay: true,//可选选项，自动滑动
+    loop: true, // 循环模式选项
+
+    // 如果需要分页器
+    pagination: {
+      el: '.swiper-pagination',
+    },
+    // 如果需要滚动条
+    scrollbar: {
+      el: '.swiper-scrollbar',
+    },
+  })
+  //鼠标覆盖停止自动切换
+  mySwiper.el.onmouseover = function () {
+    mySwiper.autoplay.stop();
+  }
+
+  //鼠标离开开始自动切换
+  mySwiper.el.onmouseout = function () {
+    mySwiper.autoplay.start();
+  }       
+</script>
+</html>
