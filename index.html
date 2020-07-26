@@ -6,6 +6,15 @@
   <title>Compress your images</title>
   <link rel="stylesheet" href="./static//css/swiper-bundle.min.css">
   <link rel="stylesheet" href="./static/css/style.css">
+  <script>
+    var _hmt = _hmt || [];
+    (function () {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?53ec191cf15faf85c88c17f1313ae3b9";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
 </head>
 <body>
   <header>
@@ -30,8 +39,8 @@
       </div>
     </div>
     <div class="down-box">
-      <a href="http://download.zhiozhou.top/Compress%20your%20images_setup_0.2.0.dmg">下载macOS端</a>
-      <a href="http://download.zhiozhou.top/Compress%20your%20images_setup_0.2.0.exe">下载Windows端</a>
+      <a href="http://download.zhiozhou.top/Compress%20your%20images_setup_0.2.0.dmg" onclick="downApp('mac')">下载macOS端</a>
+      <a href="http://download.zhiozhou.top/Compress%20your%20images_setup_0.2.0.exe" onclick="downApp('win')">下载Windows端</a>
     </div>
   </main>
   <footer>
@@ -62,6 +71,10 @@
   //鼠标离开开始自动切换
   mySwiper.el.onmouseout = function () {
     mySwiper.autoplay.start();
-  }       
+  }
+  
+  function downApp(os) {
+    window._hmt.push(['_trackEvent', '下载', 'download', `点击${os}端`, '首页下载按钮'])
+  }
 </script>
 </html>
